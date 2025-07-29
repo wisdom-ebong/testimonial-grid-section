@@ -1,0 +1,398 @@
+* {
+    margin: 0; /* removes all default margins */
+    padding: 0; /* removes all default paddings */
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif; /* sets the default font */
+}
+
+body {
+    margin: 0 auto; /* centralizes the container */
+    padding: 20px; /* adds space between body and container */
+    display: flex; 
+    align-items: center; /* centralizes container vertically */
+    justify-content: center; /* centralizes container horizonntally */
+    height: 100vh; /* defines default display height */
+    width: 100%;
+    background-color: hsl(214, 17%, 92%); /* defines background color */
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: hsl(214, 17%, 92%);
+}
+
+.container section {
+    width: 100%;
+    height: auto; 
+    padding: 30px; /* sets space within the grid items */
+    border-radius: 10px; /* sets 10px border curve to all grid items */
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3); /* adds shadow to grid items */
+}
+
+img {
+    border-radius: 50%; /* gets profile image perfectly round */
+    width: 50px; /* reduces the image horizontally */
+    height: 50px; /* reduces the image vertically*/
+}
+
+/* DANIEL CLIFFORD'S SECTION */
+
+.daniel {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    background-color: hsl(263, 55%, 52%); /* changes the background color to purple */
+    color: white; /* changes text color to white */
+}
+
+.daniel div {
+    display: flex; /* Override the grid display */
+    flex-direction: row;
+}
+
+.daniel div h3 {
+    margin: 10px; /* adds margin between the image and name/status properties */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.daniel div h3 span {
+    display: block; /* forces span to become a block element */
+    font-weight: 400; /* reduces the font weight */
+    font-size: 12px;
+    margin-top: 5px; /* ensures space between name and status */
+}
+
+.daniel h4 {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the heading text */
+    max-width: 600px; /* defines the extent to which text should span */
+}
+
+.daniel p {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph */
+    max-width: 600px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* JONATHAN WALTERS' SECTION */
+
+.jonathan {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background-color: hsl(217, 19%, 35%); /* changes the background color to grey */
+    color: white;  /* changes the text color to white */
+}
+
+.jonathan div {
+    display: flex; /* Override the grid display */
+    flex-direction: row;
+}
+
+.jonathan div h3 {
+    margin: 10px; /* adds margin between the image and name/status properties */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.jonathan div h3 span {
+    display: block; /* forces span to become a block element */
+    font-weight: 400; /* reduces the font weight */
+    font-size: 12px;
+    margin-top: 5px; /* ensures space between name and status */
+}
+
+.jonathan h4 {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the heading text */
+    max-width: 400px; /* defines the extent to which text should span */
+}
+
+.jonathan p {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph */
+    max-width: 400px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* KIRA WHITTLE'S SECTION */
+
+.kira {
+    grid-column: 4 / 6;
+    grid-row: 1 / 3;
+    background-color: hsl(0, 0%, 100%); /* changes the background color to white */
+    color: hsl(224, 10%, 45%);  /* changes the text color to grey */
+}
+
+.kira div {
+    display: flex; /* Override the grid display */
+    flex-direction: row;
+}
+
+.kira div h3 {
+    margin: 10px; /* adds margin between the image and name/status properties */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.kira div h3 span {
+    display: block; /* forces span to become a block element */
+    font-weight: 400; /* reduces the font weight */
+    font-size: 12px;
+    margin-top: 5px; /* ensures space between name and status */
+}
+
+.kira h4 {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the heading text */
+    max-width: 400px; /* defines the extent to which text should span */
+}
+
+.kira p {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph */
+    max-width: 230px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* Jeanette Harmon's Section */
+
+.jeanette {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: hsl(0, 0%, 100%); /* changes the background color to white */
+    color: hsl(224, 10%, 45%);  /* changes the text color to grey */
+}
+
+.jeanette div {
+    display: flex; /* Override the grid display */
+    flex-direction: row;
+}
+
+.jeanette div h3 {
+    margin: 10px; /* adds margin between the image and name/status properties */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.jeanette div h3 span {
+    display: block; /* forces span to become a block element */
+    font-weight: 400; /* reduces the font weight */
+    font-size: 12px;
+    margin-top: 5px; /* ensures space between name and status */
+}
+
+.jeanette h4 {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the heading text */
+    max-width: 200px; /* defines the extent to which text should span */
+}
+
+.jeanette p {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph */
+    max-width: 250px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* Patrick Abrams' Section */
+
+.patrick {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    background-color: hsl(219, 29%, 14%); /* changes the background color to Dark Blue */
+    color: hsl(214, 17%, 92%);  /* changes the text color to grey */
+}
+
+.patrick div {
+    display: flex; /* Override the grid display */
+    flex-direction: row;
+}
+
+.patrick div h3 {
+    margin: 10px; /* adds margin between the image and name/status properties */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.patrick div h3 span {
+    display: block; /* forces span to become a block element */
+    font-weight: 400; /* reduces the font weight */
+    font-size: 12px;
+    margin-top: 5px; /* ensures space between name and status */
+}
+
+.patrick h4 {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the heading text */
+    max-width: 600px; /* defines the extent to which text should span */
+}
+
+.patrick p {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph */
+    max-width: 600px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* MEDIA QUERIES SECTION */
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+
+    .container {
+        display: flex; /* force the diaplay to adopt the flex display */
+        flex-direction: column; /* keeps the direction of the flex vertically */
+    }
+
+    .daniel {
+        order: 1; /* places the .daniel class in the first order */
+    }
+
+    .jonathan {
+        order: 2; /* places the .jonathan class in the second order */
+    }
+
+    .jonathan h4 {
+        max-width: 600px; /* increases the maximum width of the heading text */
+    }
+
+    .jonathan p {
+        max-width: 600px; /* increases the maximum width of the paragraph text */
+    }
+
+    .jeanette {
+        order: 3; /* places the .jeanette class in the third order */
+    }
+
+    .jeanette h4 {
+        max-width: 600px; /* increases the maximum width of the heading text */
+    }
+
+    .jeanette p {
+        max-width: 600px; /* increases the maximum width of the paragraph text */
+    }
+
+    .patrick {
+        order: 4; /* places the .patrick class in the fourth order */
+    }
+
+    .kira {
+        order: 5; /* places the .kira class in the fifth order */
+    }
+
+    .kira h4 {
+        max-width: 600px; /* increases the maximum width of the heading text */
+    }
+
+    .kira p {
+        max-width: 600px; /* increases the maximum width of the paragraph text */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+
+    .container {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-height: auto; /* sets the maximum height of the container */
+    }
+
+    .daniel {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .daniel h4 {
+        max-width: 960px; /* increases the maximum width of the heading text */
+    }
+
+    .daniel p {
+        max-width: 960px; /* increases the maximum width of the paragraph text */
+    }
+
+    .jonathan {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .jeanette {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .jeanette h4 {
+        max-width: 400px; /* sets the maximum width of the heading text */
+    }
+
+    .jeanette p {
+        max-width: 400px; /* sets the maximum width of the paragraph text */
+    }
+
+    .patrick {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    .patrick h4 {
+        max-width: 960px; /* increases the maximum width of the heading text */
+    }
+
+    .patrick p {
+        max-width: 960px; /* increases the maximum width of the paragraph text */
+    }
+
+    .kira {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .kira h4 {
+        max-width: 960px; /* increases the maximum width of the heading text */
+    }
+
+    .kira p {
+        max-width: 960px; /* increases the maximum width of the paragraph text */
+    }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-height: 100%; /* sets the maximum height of the container */   
+    }
+
+    .daniel {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .jonathan {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .jeanette {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .patrick {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .kira {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+}
