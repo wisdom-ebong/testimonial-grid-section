@@ -246,9 +246,18 @@ img {
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
 
+    body {
+        max-height: 100%;
+    }
+    
     .container {
         display: flex; /* force the diaplay to adopt the flex display */
         flex-direction: column; /* keeps the direction of the flex vertically */
+        height: 100%;
+    }
+
+    .container section {
+        max-height: 100%;
     }
 
     .daniel {
@@ -302,6 +311,10 @@ img {
         display: grid; 
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+    }
+
+    .container section {
+        max-height: 100%;
     }
 
     .daniel {
