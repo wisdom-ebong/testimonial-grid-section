@@ -302,7 +302,6 @@ img {
         display: grid; 
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        max-height: auto; /* sets the maximum height of the container */
     }
 
     .daniel {
@@ -368,7 +367,6 @@ img {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        max-height: 100%; /* sets the maximum height of the container */   
     }
 
     .daniel {
