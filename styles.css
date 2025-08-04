@@ -1,0 +1,319 @@
+* {
+    margin: 0; /* removes all default margins */
+    padding: 0; /* removes all default paddings */
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif; /* sets the default font */
+}
+
+body {
+    margin: 0 auto; /* centralizes the container */
+    padding: 20px; /* adds space between body and container */
+    display: flex; 
+    align-items: center; /* centralizes container vertically */
+    align-content: center; /* centralizes container vertically */
+    justify-content: center; /* centralizes container horizontally */
+    min-height: 100vh; /* defines default display height */
+    width: 100%;
+    background-color: hsl(214, 17%, 92%); /* defines background color */
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: hsl(214, 17%, 92%);
+}
+
+.container section  {
+    width: 100%;
+    padding: 30px; /* sets space within the grid items */
+    border-radius: 10px; /* sets 10px border curve to all grid items */
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3); /* adds shadow to grid items */
+}
+
+img {
+    border-radius: 50%; /* gets profile image perfectly round */
+    width: 50px; /* reduces the image horizontally */
+    height: 50px; /* reduces the image vertically*/
+}
+
+.daniel div,
+.jonathan div,
+.kira div,
+.jeanette div,
+.patrick div {
+    display: flex; /* Override the grid display */
+    flex-direction: row;
+}
+
+.daniel div h2,
+.jonathan div h2,
+.kira div h2,
+.jeanette div h2,
+.patrick div h2 {
+    margin: 10px; /* adds margin between the image and name/status properties */
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.daniel div h2 span,
+.jonathan div h2 span,
+.kira div h2 span,
+.jeanette div h2 span,
+.patrick div h2 span {
+    display: block; /* forces span to become a block element */
+    font-weight: 400; /* reduces the font weight */
+    font-size: 12px;
+    margin-top: 5px; /* ensures space between name and status */
+}
+
+.daniel p,
+.patrick p {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph text */
+    max-width: 600px; /* defines the extent to which text should span */
+    font-weight: bold;
+}
+
+.daniel blockquote,
+.patrick blockquote {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the blockquote */
+    max-width: 600px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+.jonathan p,
+.jeanette p {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph */
+    font-weight: bold;
+    max-width: 400px; /* defines the extent to which text should span */
+}
+
+.jonathan blockquote,
+.jeanette blockquote {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the blockquote */
+    max-width: 400px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* DANIEL CLIFFORD'S SECTION */
+
+.daniel {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    background-color: hsl(263, 55%, 52%); /* changes the background color to purple */
+    color: white; /* changes text color to white */
+}
+
+/* JONATHAN WALTERS' SECTION */
+
+.jonathan {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    background-color: hsl(217, 19%, 35%); /* changes the background color to grey */
+    color: white;  /* changes the text color to white */
+}
+
+/* KIRA WHITTLE'S SECTION */
+
+.kira {
+    grid-column: 4 / 6;
+    grid-row: 1 / 3;
+    background-color: hsl(0, 0%, 100%); /* changes the background color to white */
+    color: hsl(224, 10%, 45%);  /* changes the text color to grey */
+}
+
+.kira p {
+    font-size: 20px;  /* makes text bigger */
+    margin-top: 10px; /* adds space above the paragraph text */
+    max-width: 400px; /* defines the extent to which text should span */
+    font-weight: bold;
+}
+
+.kira blockquote {
+    font-size: 13px; /* makes text bigger */
+    margin-top: 10px; /* adds space above the blockquote */
+    max-width: 230px; /* defines the extent to which text should span */
+    line-height: 1.2rem; /* adds space in-between lines for clarity */
+}
+
+/* Jeanette Harmon's Section */
+
+.jeanette {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: hsl(0, 0%, 100%); /* changes the background color to white */
+    color: hsl(224, 10%, 45%);  /* changes the text color to grey */
+}
+
+/* Patrick Abrams' Section */
+
+.patrick {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    background-color: hsl(219, 29%, 14%); /* changes the background color to Dark Blue */
+    color: hsl(214, 17%, 92%);  /* changes the text color to grey */
+}
+
+/* MEDIA QUERIES SECTION */
+
+/* For Mobile Screens */
+@media screen and (max-width: 600px) {
+
+    body {
+        min-height: 100%;
+    }
+    
+    .container {
+        display: flex; /* force the display to adopt the flex display */
+        flex-direction: column; /* keeps the direction of the flex vertically */
+        min-height: 100%;
+    }
+
+    .daniel {
+        order: 1; /* places the .daniel class in the first order */
+    }
+
+    .jonathan {
+        order: 2; /* places the .jonathan class in the second order */
+    }
+
+    .jonathan h2,
+    .jeanette h2 {
+        max-width: 600px; /* increases the maximum width of the heading text */
+    }
+
+    .jonathan blockquote,
+    .jeanette blockquote {
+        max-width: 600px; /* increases the maximum width of the paragraph text */
+    }
+
+    .jeanette {
+        order: 3; /* places the .jeanette class in the third order */
+    }
+
+    .jeanette p {
+        max-width: 600px; /* increases the maximum width of the paragraph text */
+    }
+
+    .jeanette blockquote {
+        max-width: 600px; /* increases the maximum width of the blockquoted text */
+    }
+
+    .patrick {
+        order: 4; /* places the .patrick class in the fourth order */
+    }
+
+    .kira {
+        order: 5; /* places the .kira class in the fifth order */
+    }
+
+    .kira p {
+        max-width: 600px; /* increases the maximum width of the paragraph */
+    }
+
+    .kira blockquote {
+        max-width: 1200px; /* increases the maximum width of the blockquoted text */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 960px) {
+
+    .container {
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .daniel p,
+    .patrick p,
+    .kira p {
+        max-width: 960px; /* increases the maximum width of the paragraph */
+    }
+
+    .daniel blockquote,
+    .patrick blockquote,
+    .kira blockquote {
+        max-width: 960px; /* increases the maximum width of the blockquoted text */
+    }
+
+    .daniel {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .jonathan {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .jeanette {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .jeanette p,
+    .jonathan p {
+        max-width: 350px; /* sets the maximum width of the paragraph */
+    }
+
+    .jeanette blockquote,
+    .jonathan blockquote {
+        max-width: 400px; /* sets the maximum width of the blockquoted text */
+    }
+
+    .patrick {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    .kira {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+}
+
+@media screen and (min-width: 961px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .container section {
+        max-height: 100%;
+    }
+
+    .daniel {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .jonathan {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .jeanette {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .patrick {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .kira {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+}
